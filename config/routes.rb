@@ -1,12 +1,14 @@
 RandaalexTwitter::Application.routes.draw do
   get "users" => 'users#index'
   get "user/:id" => 'users#show'
+  get "user/:id/edit" => 'users#edit'
 
-  get "users/create"
+  get "users/new"
+  post "users" => 'users#create'
 
   get "users/update"
 
-  get "users/edit"
+  
 
 
   get "users/destroy"

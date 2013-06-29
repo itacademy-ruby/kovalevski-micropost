@@ -1,0 +1,8 @@
+HW: 
+
+1) дописать вьюшки и контролееры для User и Micropost
+2) написать валидатор длинны Micropost.content
+3) написать валидатор проверки User.email
+4) форма добавления Micropost в User.show
+5) форма добавление Micropost в Micropost.create с выпадающим списком юзеров
+6) 

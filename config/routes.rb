@@ -1,23 +1,24 @@
 RandaalexTwitter::Application.routes.draw do
-  #resources :microposts
-  get "users" => 'users#index'
-  get "user/:id" => 'users#show'
-  get "user/:id/edit" => 'users#edit'
+  resources :microposts
+  resources :users
+ # get "users" => 'users#index'
+ # get "user/:id" => 'users#show'
+  #get "user/:id/edit" => 'users#edit'
 
-  get "users/new"
-  post "users" => 'users#create'
+  #get "users/new"
+  #post "users" => 'users#create'
 
-  get "users/update"
+  #get "users/update"
 
-  get "microposts" => 'microposts#index'
+  #get "microposts" => 'microposts#index'
  
 
-  post "microposts" => 'microposts#create'
+ # post "microposts" => 'microposts#create'
 
   
 
 
-  get "users/destroy"
+  #get "users/destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -68,7 +69,7 @@ RandaalexTwitter::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 

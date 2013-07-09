@@ -1,12 +1,19 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 gem "twitter-bootstrap-rails"
+gem 'execjs'
+gem 'libv8', '3.11.8.3'
+gem 'therubyracer', '0.11.0beta5'
+
 
 
 # Gems used only for assets and not required

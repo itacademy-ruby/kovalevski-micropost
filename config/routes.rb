@@ -2,7 +2,7 @@ RandaalexTwitter::Application.routes.draw do
   resources :microposts
   resources :users
  # get "users" => 'users#index'
- # get "user/:id" => 'users#show'
+ get "user/:id" => 'users#show'
   #get "user/:id/edit" => 'users#edit'
 
   #get "users/new"

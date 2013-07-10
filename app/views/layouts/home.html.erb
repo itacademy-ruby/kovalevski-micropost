@@ -47,8 +47,8 @@
           <a class="brand" href="#">KovalevskiTwitter</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "About user", "users#show" %></li>
-              <li><%= link_to "Microposts", "users"  %></li>
+              <li><%= link_to "About user", "users" %></li>
+              <li><%= link_to "Microposts", "microposts"  %></li>
               <li><%= link_to "Register", "users/new"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -67,9 +67,10 @@
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
-                <li><%= link_to "About user", "users#show" %></li>
-                <li><%= link_to "Microposts", "users"  %></li>
+                <li><%= link_to "About user", user_path('1') %></li>
+                <li><%= link_to "Microposts", "microposts"  %></li>
                 <li><%= link_to "Register", "users/new"  %></li>
+                <li><%= link_to "Add micropost", "microposts/new" %></li>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->

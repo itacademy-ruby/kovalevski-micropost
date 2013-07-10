@@ -1,9 +1,9 @@
 class MicropostsController < ApplicationController
   def index
-    @Microposts = Micropost.all
+    @microposts = Micropost.all
   end
   def show
-    @Micropost = Micropost.find(params[:user_id])  
+    @micropost = Micropost.find(params[:user_id])  
   end
   def new
     @micropost = Micropost.new

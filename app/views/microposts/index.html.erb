@@ -1,0 +1,5 @@
+<h1>Microposts: </h1>
+
+<% @microposts.each do |post| %>
+  <%= render :partial => "micropost", :locals => {:post => post} %>
+<% end %>

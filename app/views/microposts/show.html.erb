@@ -1,7 +1,7 @@
 <div class="well sidebar-nav">
   <h1>Microposts: </h1>
 
-  <% @user.microposts.each do |post| %>
+  <% @microposts.each do |post| %>
     <%= render :partial => "micropost", :locals => {:post => post} %>
   <% end %>
 </div>

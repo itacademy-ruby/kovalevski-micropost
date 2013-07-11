@@ -3,5 +3,6 @@ class User < ActiveRecord::Base
 
   has_many :microposts
 
+  validates(:email, presence: true)
   validates :login, :length => {:minimum => 5}
-end
+ end

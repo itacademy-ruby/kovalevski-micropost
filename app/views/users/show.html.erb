@@ -1,17 +1,22 @@
 <% provide(:title, @user.login) %>
+<div class="row">
+  <aside class="span4">
+  	<section>
+	  <h1>
+  		<%= gravatar_for @user %>
+  		<%= @user.login %> 
+	  </h1>
 
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.login %> 
-</h1>
 
+	  email:  <%= @user.email %>
+      <br>
+	  post count: <%= @user.microposts.count %>
 
-email:  <%= @user.email %>
-<br>
-post count: <%= @user.microposts.count %>
+		<h1>Microposts: </h1>
 
-<h1>Microposts: </h1>
-
-<% @user.microposts.each do |post| %>
-  <%= render :partial => "micropost", :locals => {:post => post} %>
-<% end %>
+			<% @user.microposts.each do |post| %>
+  			  <%= render :partial => "micropost", :locals => {:post => post} %>
+			<% end %>
+		</section>
+	</aside>
+</div>

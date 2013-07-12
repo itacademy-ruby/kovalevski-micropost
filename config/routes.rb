@@ -1,6 +1,9 @@
 RandaalexTwitter::Application.routes.draw do
   resources :microposts
   resources :users
+  root :to => 'static_pages#home'
+
+  match '/signup',  to: 'users#new'
  # get "users" => 'users#index'
  get "user/:id" => 'users#show'
   #get "user/:id/edit" => 'users#edit'
@@ -69,7 +72,7 @@ RandaalexTwitter::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'static_pages#home'
+  
 
   # See how all your routes lay out with "rake routes"
 

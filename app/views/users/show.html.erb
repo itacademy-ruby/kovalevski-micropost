@@ -1,4 +1,9 @@
-<h1> <%= @user.login %> </h1>
+<% provide(:title, @user.login) %>
+
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.login %> 
+</h1>
 
 
 email:  <%= @user.email %>

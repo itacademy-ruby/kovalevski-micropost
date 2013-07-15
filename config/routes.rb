@@ -1,9 +1,12 @@
 RandaalexTwitter::Application.routes.draw do
   resources :microposts
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   root :to => 'static_pages#home'
 
   match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
  # get "users" => 'users#index'
  get "user/:id" => 'users#show'
   #get "user/:id/edit" => 'users#edit'

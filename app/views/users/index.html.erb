@@ -1,12 +1,14 @@
-<h1>Users:</h1>
+<% provide(:title, 'All users') %>
+<h1>All Users</h1>
 
-<table  border="1px">
+<ul class="users">
 <% @users.each do |user| %>
-  <tr>
-    <td> <%= user.id %> </td>
-    <td> <%= user.login %></td>
-    <td> <%= user.email %> </td>
-    <td> <%= user.microposts.count %> </td>
-  </tr>
+  <li>
+    <%= gravatar_for user %>
+      <%= link_to user.login, user %> 
+  </li>
 <% end %>
-</table>
+
+	
+	
+ 

@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.0.1'
 
 
 # Bundle edge Rails instead:
@@ -11,9 +12,9 @@ gem 'bcrypt-ruby', '3.0.1'
 
 gem 'sqlite3'
 gem "twitter-bootstrap-rails"
-gem 'execjs'
-gem 'libv8', '3.11.8.3' 
-gem 'therubyracer', '0.11.0beta5'
+
+
+gem 'therubyracer'
 
 
 

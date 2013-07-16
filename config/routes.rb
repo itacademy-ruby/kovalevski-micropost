@@ -9,7 +9,7 @@ RandaalexTwitter::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
  # get "users" => 'users#index'
  get "user/:id" => 'users#show'
-  #get "user/:id/edit" => 'users#edit'
+  get "user/:id/edit" => 'users#edit'
 
   #get "users/new"
   #post "users" => 'users#create'

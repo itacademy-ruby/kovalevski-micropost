@@ -16,8 +16,9 @@ gem 'sqlite3'
 gem "twitter-bootstrap-rails"
 
 
-gem 'therubyracer'
-
+gem 'execjs'
+gem 'libv8', '3.11.8.3' 
+gem 'therubyracer', '0.11.0beta5'
 
 
 # Gems used only for assets and not required

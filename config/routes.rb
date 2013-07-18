@@ -1,11 +1,12 @@
 RandaalexTwitter::Application.routes.draw do
-  resources :microposts
+  resources :microposts, only: [:create, :destroy]
   resources :users do 
-    member do |
-      get :following, :followers|
+    member do 
+      get :following, :followers
     end
   end
 
+  resources :relationships, only: [:create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
   root :to => 'static_pages#home'
 

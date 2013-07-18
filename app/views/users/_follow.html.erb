@@ -1,0 +1,8 @@
+<%= form_for(current_user.relationships.build(followed_id: @user.id)) do |f| %>
+  <div><%= f.hidden_field :followed_id %></div>
+
+<input id="followed_relationship_followed_id" name="followed_relationship[followed_id]"
+type="hidden" value="3" />
+
+  <%= f.submit "Follow", class: "btn btn-large btn-primary" %>
+<% end %>

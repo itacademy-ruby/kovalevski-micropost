@@ -7,16 +7,31 @@
   		<%= @user.login %> 
 	  </h1>
 
+	  <% if signed_in? %>
+            <section>
+              <%= render 'shared/stats' %>
+            </section>
+            
+        <% end %>
+
 
 	  email:  <%= @user.email %>
       <br>
 	  post count: <%= @user.microposts.count %>
 
+		</section>
+	</aside>
+	<div class="span8">
+    <%= render 'follow_form' if signed_in? %>
+    
+    </div>
+	<div class="span8">
+		<aside>
 		<h1>Microposts: </h1>
 
 			<% @user.microposts.each do |post| %>
   			  <%= render :partial => "micropost", :locals => {:post => post} %>
 			<% end %>
-		</section>
-	</aside>
+		</aside>
+	</div>
 </div>

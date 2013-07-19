@@ -1,37 +1,42 @@
 <% provide(:title, @user.login) %>
 <div class="row">
-  <aside class="span4">
+
+<aside class="span8">
   	<section>
-	  <h1>
+	  <h3>
   		<%= gravatar_for @user %>
   		<%= @user.login %> 
-	  </h1>
+	  </h3>
 
 	  <% if signed_in? %>
-            <section>
-              <%= render 'shared/stats' %>
-            </section>
+    	<section>
+          <%= render 'shared/stats' %>
+    	</section>
             
         <% end %>
+		
+	</section>
+	 <div >
+        <%= render 'follow_form' if signed_in? %>
+
+      </div>
+  </aside>
+
+    <article>
+      	
+	  <div class="span8">
+		<% if @user.microposts.any? %>
+		<h3>Microposts: (<%= @user.microposts.count %>) </h3>
+       
+			<ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+      		
+		<% end %>
+		
+	   </div>
+     </article>
 
 
-	  email:  <%= @user.email %>
-      <br>
-	  post count: <%= @user.microposts.count %>
-
-		</section>
-	</aside>
-	<div class="span8">
-    <%= render 'follow_form' if signed_in? %>
-    
-    </div>
-	<div class="span8">
-		<aside>
-		<h1>Microposts: </h1>
-
-			<% @user.microposts.each do |post| %>
-  			  <%= render :partial => "micropost", :locals => {:post => post} %>
-			<% end %>
-		</aside>
-	</div>
 </div>

@@ -1,1 +1,22 @@
 <h1>Welcome to the Home Page</h1>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    
+  
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+   <h3>  Register to add your own microposts! </h3>
+  </div>
+
+  
+<% end %>

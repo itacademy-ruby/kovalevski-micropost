@@ -48,8 +48,8 @@
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Users", "users" %></li>
-              <li><%= link_to "Microposts", "microposts"  %></li>
-              <li><%= link_to "Register", "users/new"  %></li>
+              <li><%= link_to "Microposts", "microposts" %></li>
+              <li><%= link_to "Register", "users/new" %></li>
                
           <% if signed_in? %>
             <li>
@@ -85,16 +85,7 @@
             <%= yield %>
           </div>
 
-          <div class="center hero-unit">
-            
-                  <h2>
-                     This is the home page for the
-                     <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-                       sample application.
-                  </h2>
-
-              <%= link_to "Sign up now!", 'signup', class: "btn btn-large btn-primary" %>
-          </div>
+         
 
           <div class="span3">
             <div class="well sidebar-nav">
@@ -102,8 +93,8 @@
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
                 <li><%= link_to "About user", user_path('1') %></li>
-                <li><%= link_to "Microposts", "microposts"  %></li>
-                <li><%= link_to "Register", "users/new"  %></li>
+                <li><%= link_to "Microposts", "microposts" %></li>
+                <li><%= link_to "Register", "users/new" %></li>
                 <li><%= link_to "Add micropost", "microposts/new" %></li>
               </ul>
             </div><!--/.well -->
@@ -117,9 +108,8 @@
     </div> <!-- /container -->
 
     <!-- Javascripts
-    ================================================== -->
+================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
-
   </body>
 </html>

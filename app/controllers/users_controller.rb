@@ -68,6 +68,13 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  
+  def feed
+    microposts
+  end
+
+
+
   private
 
     #def signed_in_user

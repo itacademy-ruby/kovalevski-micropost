@@ -26,4 +26,10 @@ class MicropostsController < ApplicationController
       end
   end
   end
+
+  def feed
+  microposts
+end
+
+  
 end

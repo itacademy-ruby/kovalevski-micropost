@@ -69,9 +69,7 @@ class UsersController < ApplicationController
   end
 
   
-  def feed
-    microposts
-  end
+  
 
 
 

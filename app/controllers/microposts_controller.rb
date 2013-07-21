@@ -9,6 +9,7 @@ class MicropostsController < ApplicationController
   end
   def new
     @micropost = Micropost.new
+    redirect_to root_path
   end
   def create
     @micropost = current_user.microposts.build(params[:micropost])
@@ -16,20 +17,15 @@ class MicropostsController < ApplicationController
 	respond_to do |format|
       if @micropost.save
         flash[:success] = "Micropost created!"
-        redirect_to "user/show"
+        redirect_to root_path
         #format.html { redirect_to "show", notice: 'Post was created.' }
         #format.json { render json: @microposts, status: :created, location: @user }
       else
-        render 'static_pages/home'
+        render action: "new"  #'static_pages/home'
         #format.html { render action: "new" }
         #format.json { render json: @micropost.errors, status: :unprocessable_entity }
       end
   end
   end
-
-  def feed
-  microposts
-end
-
-  
+   
 end

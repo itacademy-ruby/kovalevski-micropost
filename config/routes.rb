@@ -25,7 +25,7 @@ RandaalexTwitter::Application.routes.draw do
   #get "microposts" => 'microposts#index'
  
 
- # post "microposts" => 'microposts#create'
+ #post "microposts" => 'microposts#create'
 
   
 

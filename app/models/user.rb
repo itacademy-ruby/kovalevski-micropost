@@ -34,6 +34,11 @@ class User < ActiveRecord::Base
     relationships.find_by_followed_id(other_user.id).destroy
   end
 
+  def feed
+    # Это предварительное решение. См. полную реализацию в "Following users".
+    Micropost.where("user_id = ?", id)
+  end
+
   
   private
 

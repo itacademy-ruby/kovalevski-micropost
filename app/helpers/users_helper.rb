@@ -14,4 +14,8 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.login, class: "gravatar")
   end
 
+ def feed
+    Micropost.from_users_followed_by(self)
+  end
+
 end

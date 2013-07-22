@@ -1,5 +1,11 @@
 class MicropostsController < ApplicationController
   before_filter :signed_in_user
+  before_filter :correct_user,   only: :destroy
+
+  def destroy
+    @micropost.destroy
+    redirect_to root_url
+  end
 
   def index
     @microposts = Micropost.paginate(:page => params[:page], :per_page => 30)
@@ -13,11 +19,13 @@ class MicropostsController < ApplicationController
   end
   def create
     @micropost = current_user.microposts.build(params[:micropost])
-	#@micropost = Micropost.new(params[:micropost])
+    
+	
 	respond_to do |format|
       if @micropost.save
         flash[:success] = "Micropost created!"
-        redirect_to root_path
+
+        redirect_to root_url
         #format.html { redirect_to "show", notice: 'Post was created.' }
         #format.json { render json: @microposts, status: :created, location: @user }
       else
@@ -28,4 +36,11 @@ class MicropostsController < ApplicationController
   end
   end
    
+  private
+
+    def correct_user
+      @micropost = current_user.microposts.find_by_id(params[:id])
+      redirect_to root_url if @micropost.nil?
+    end
+
 end

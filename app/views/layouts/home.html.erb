@@ -51,12 +51,12 @@
               <li><%= link_to "Microposts", "microposts" %></li>
               <li><%= link_to "Register", "users/new" %></li>
                
-          <% if signed_in? %>
-            <li>
-              <%= render 'shared/stats' %>
-            </li>
-            <li><%= link_to "Users", '#' %></li>
-            <li id="fat-menu" class="dropdown">
+            <% if signed_in? %>
+              <li>
+                <%= render 'shared/stats' %>
+              </li>
+              
+              <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b class="caret"></b>
               </a>
